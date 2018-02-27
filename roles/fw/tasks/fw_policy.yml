@@ -1,0 +1,16 @@
+---
+- name: Allow external DNS calls
+  fortios_ipv4_policy:
+    host: "{{ host }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    id: 0
+    src_intf: lan
+    dst_intf: wan
+    src_addr: all
+    dst_addr: all
+    service: DNS
+    nat: True
+    state: present
+    policy_action: accept
+    logtraffic: disable

@@ -1,0 +1,11 @@
+---
+- name: Add Address Object
+  fortios_address:
+    host: "{{ host }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    state: present
+    name: "Test123"
+    type: fqdn
+    value: www.test.com
+    comment: "ansible test"

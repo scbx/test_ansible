@@ -1,0 +1,4 @@
+---
+- include_tasks: address_objects.yml
+- include_tasks: fw_policy.yml
+- include_tasks: backup_config.yml

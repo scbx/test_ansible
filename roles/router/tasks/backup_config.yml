@@ -1,0 +1,10 @@
+---
+- name: Backup Config
+  ios_command:
+    commands: show running
+    provider: "{{ creds }}"
+  register: config
+
+- copy:
+    content: "{{ config.stdout[0] }}"
+    dest: "/tmp/cisco_backup/{{ backup_name }}"

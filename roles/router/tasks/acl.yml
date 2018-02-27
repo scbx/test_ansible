@@ -1,0 +1,5 @@
+---
+- name: Create ACL
+  ios_config:
+    provider: "{{ creds }}"
+    lines: access-list 192 permit tcp any any eq www

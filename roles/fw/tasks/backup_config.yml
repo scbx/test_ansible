@@ -1,0 +1,9 @@
+---
+- name: Backup Configuration
+  fortios_config:
+    host: "{{ host }}"
+    username: "{{ username }}"
+    password: "{{ password }}"
+    backup_filename: "{{ backup_name}}"
+    backup: yes
+    backup_path: /tmp/fortinet_backup/

@@ -1,0 +1,8 @@
+---
+creds:
+  host: 172.30.0.1
+  username: admin
+  password: Pass
+host: 172.30.0.1
+date_import: "{{lookup ('pipe', 'date +%Y-%m-%d-%H-%M') }}"
+backup_name: "{{ date_import }}-{{ host }}"

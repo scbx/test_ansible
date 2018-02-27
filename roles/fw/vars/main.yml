@@ -1,0 +1,6 @@
+---
+host: 172.30.0.254
+username: admin
+password: Pass
+date_import: "{{lookup ('pipe', 'date +%Y-%m-%d-%H-%M') }}"
+backup_name: "{{ date_import }}-{{ host }}"
